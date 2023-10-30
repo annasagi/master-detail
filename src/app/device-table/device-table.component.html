@@ -1,0 +1,36 @@
+<div class="button-container">
+	<div class="left-buttons">
+		<!-- Button to clear selection -->
+		<button mat-raised-button (click)="selectAll()">Select all</button>
+		<!-- Button to clear selection -->
+		<button mat-raised-button (click)="clearSelection()">Clear selection</button>
+	</div>
+
+
+	<div class="right-buttons">
+		<!-- Button to clear selection -->
+		<button mat-raised-button (click)="expandAll()">Expand all</button>
+		<!-- Button to clear selection -->
+		<button mat-raised-button (click)="collapseAll()">Collapse all</button>
+	</div>
+</div>
+
+<ag-grid-angular
+	style="width: 100%; height: 100%"
+	class="ag-theme-alpine"
+    [keepDetailRows]="true"
+	[masterDetail]="true"
+	[detailCellRendererParams]="detailCellRendererParams"
+	[rowSelection]="rowSelection"
+	[suppressRowClickSelection]="true"
+	(rowSelected)="onRowSelected($event)"
+	(selectionChanged)="onSelectionChanged($event)"
+	[columnDefs]="columnDefs"
+	[defaultColDef]="defaultColDef"
+	[rowData]="rowData"
+	[rowSelection]="'multiple'"
+	[animateRows]="true"
+	(gridReady)="onGridReady($event)"
+	(cellClicked)="onCellClicked($event)"
+	(getRowId)="getRowId"
+></ag-grid-angular>

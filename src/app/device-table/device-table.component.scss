@@ -1,0 +1,30 @@
+:host {
+
+    .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            gap: 4px;
+        }
+    
+        .left-buttons {
+            display: flex;
+            gap: 10px;
+            /* Optional: Adds some space between the buttons */
+        }
+    
+        .right-buttons {
+            display: flex;
+            gap: 10px;
+            /* Optional: Adds some space between the buttons */
+        }
+    
+        .device-table-container {
+            flex-grow: 0;
+            flex-shrink: 0;
+            overflow-x: hidden;
+            overflow-y: hidden !important;
+        }
+        }
